@@ -1,11 +1,14 @@
 <h1>Places</h1>
 
 <ul>
-  <% for place in @places %>
+<%if @current_user%>
+  <% for place in @myplaces %>
     <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
   <% end %>
 </ul>
+<% end %>
+
 
 <p>
-  <a href="/places/new">New place</a>
+  <a class="btn btn-primary" href="/places/new" role="button">New Place</a>
 </p>
