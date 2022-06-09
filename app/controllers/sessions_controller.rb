@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
         redirect_to "/login"
       end
     else
-      flash["notice"] = "Nope."
+      flash["notice"] = "Sorry, your credentials are not recognized."
       redirect_to "/login"
     end
   end
